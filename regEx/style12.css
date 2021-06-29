@@ -1,0 +1,363 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*Headings*/
+
+.food {
+    min-height: 80vh;
+    width: 100%;
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+    align-items: center;
+    background-color: black;
+}
+
+.food .food-info {
+    width: 100%;
+    text-align: center;
+}
+
+.food .food-info .food-info-heading {
+    font-size: 5rem;
+    font-weight: 500;
+    color: white;
+}
+
+.food .food-info .food-info-subheading {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    color: whitesmoke;
+}
+
+.food .food-info .food-info-button {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding: 2rem 5rem;
+    display: inline-block;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 0.6rem;
+    background-color: rgba(85, 85, 85, 0.534);
+}
+
+.food .food-img {
+    height: auto;
+    width: 50%;
+    margin-bottom: 3rem;
+}
+
+.food .food-img img {
+    height: 100%;
+    width: 100%;
+}
+
+
+/*End of headings*/
+
+
+/*About*/
+
+.about {
+    width: 100%;
+    min-width: 50vh;
+    padding: 10rem 5rem;
+    flex-direction: column;
+}
+
+.about .about-info {
+    text-align: center;
+}
+
+.about .about-info .about-info-heading {
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    color: black;
+}
+
+.about .about-info .about-info-desc {
+    font-size: 1.3rem;
+    line-height: 2rem;
+    margin-top: 10px;
+}
+
+.about .about-info .about-info-button {
+    padding: 1.6rem 2.6rem;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.548);
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.about .about-img .about-img-wrapper {
+    margin-top: 50px;
+    height: auto;
+    max-width: 400px;
+    position: relative;
+    display: inline-block;
+}
+
+.about .about-img .about-img-wrapper img {
+    height: 100%;
+    width: 100%;
+}
+
+.about .about-img .about-img-wrapper::after {
+    position: absolute;
+    content: '';
+    right: -5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 70%;
+    height: 120%;
+    background-color: rgba(34, 33, 33, 0.158);
+    z-index: -1;
+}
+
+
+/*End of about*/
+
+
+/*Service section*/
+
+.services {
+    flex-direction: column;
+    min-height: 60vh;
+    padding: 10rem 5rem;
+}
+
+.services .services-header {
+    width: 100%;
+    text-align: center;
+}
+
+.services .services-header .services-header-heading {
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: black;
+}
+
+.services .services-header .services-header-desc {
+    font-size: 1.3rem;
+    line-height: 2rem;
+    margin-top: 20px;
+}
+
+.services .services-info {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+.services .services-info .service {
+    width: 100%;
+    min-height: 300px;
+    position: relative;
+    transition: 0.3s ease transform;
+    margin: 5px;
+}
+
+.services .services-info .service .service-card {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: .3s ease transform;
+    display: block;
+}
+
+.services .services-info .service .service-card .service-front,
+.services .services-info .service .service-card .service-back {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.13);
+    padding: 10px;
+}
+
+.services .services-info .service .service-card .service-back {
+    transform: rotateY(180deg);
+}
+
+.services .services-info .service .service-card .service-front {
+    font-size: 4rem;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.services .services-info .service .service-card .service-front .service-front-heading,
+.services .services-info .service .service-card .service-back .service-back-heading {
+    font-size: 2.5rem;
+    text-transform: capitalize;
+}
+
+.services .services-info .service:hover .service-card {
+    transform: rotateY(180deg);
+}
+
+.services .services-info .service .service-card .service-back .service-back .desc {
+    font-size: 1.3rem;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.services .services-info .service:nth-child(2).service-card .service-front::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.274);
+    z-index: -1;
+}
+
+.services .services-info .service:nth-child(2).service-card .service-front i {
+    color: white;
+}
+
+
+/*End service section*/
+
+
+/*Hire section*/
+
+.hire {
+    min-height: 10vh;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.212);
+    padding: 3rem 2rem;
+}
+
+.hire .hire-heading {
+    color: black;
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+.hire .hire-button {
+    padding: 2rem 3rem;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.267);
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.2rem;
+    margin-top: 10px;
+    color: whitesmoke;
+    transition: 0.3s ease background-color;
+}
+
+.hire .hire-button:hover {
+    background-color: black;
+}
+
+
+/*End Hire section*/
+
+
+/*Footer section*/
+
+.footer {
+    min-height: 20vh;
+    width: 100%;
+    background-color: black;
+    color: white;
+    flex-direction: column;
+    text-align: center;
+    padding: 5rem;
+}
+
+.footer .footer-contact {
+    padding: 20px;
+}
+
+.footer .footer-contact .footer-contact-heading {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.footer .footer-contact .footer-contact-info {
+    font-size: 1.4rem;
+    padding-top: 10px;
+    letter-spacing: .2rem;
+}
+
+.footer .footer-social-follow .footer-social-icon a {
+    color: white;
+    font-size: 3rem;
+    margin: .4rem;
+    display: inline-block;
+}
+
+
+/*End of footer*/
+
+
+/*Media query*/
+
+@media only screen and (min-width:768) {
+    .food {
+        height: 100vh;
+        flex-direction: row;
+        padding-left: 10%;
+        justify-content: center;
+        align-items: center;
+    }
+    .food .food-info {
+        max-width: 30%;
+        text-align: left;
+    }
+    .food .food-info .food-info-subheading {
+        font-size: 1.3rem;
+        letter-spacing: .5rem;
+    }
+    .food .food-img {
+        min-width: 400px;
+        max-width: 1000px;
+    }
+}
+
+
+/*End of media query*/
